@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year Checker</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            font-size: 18px;
+            
+        }
+        div{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            height: 100dvh;
+        }
+        .btn{
+            text-align: center;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+                        
+        }
+        button:hover{
+            background-color: darkgreen;
+        }
+     
+        form{
+            position: absolute;
+            top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+            width: 300px;
+            height: 150px;
+            border-radius: 5px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),
+            -12px -12px 10px rgb(255, 255, 255);
+        }
+        p{
+            font-size: 14px;
+            font-weight: bold;
+            width: 100%;
+            display: none;
+        }
+        input{
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid    red;
+            outline: none;
+        }
+        ::placeholder{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+      <h1>Check if a year is a leap year</h1>
+    <form id="form" onsubmit="event.preventDefault(); isLeapYears();">
+        <label for="year">Enter a year</label>
+        <input type="text" id="year" placeholder="Enter a year" name="year" required>
+        <div class="btn">
+            <button type="submit">Check</button>
+            <button type="button" onclick="resetFrom()">Reset</button>
+            
+        </div>
+        <p id="result"></p>
+    </form>
+  </div>
+    <script src="leapyear.js"></script>
+
+</body>
+</html>
